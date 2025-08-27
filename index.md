@@ -75,7 +75,7 @@ title: Your Name
 </div>
 
 <footer>
-  © Your Affiliation. Last Updated: 2025
+  © Your Affiliation. Last Updated: August 2025
 </footer>
 
 </main>
