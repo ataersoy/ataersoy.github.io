@@ -1,5 +1,5 @@
 ---
-title: Your Name
+title: Ahmet Ata Ersoy
 ---
 
 <link rel="stylesheet" href="style.css">
@@ -7,17 +7,16 @@ title: Your Name
 <main>
 
 <div class="header">
-  <img src="assets/images/me.jpg" alt="Your photo">
+  <img src="assets/images/ahmet_ata_ersoy.jpg" alt="Ahmet Ata Ersoy">
   <div>
-    # Your Name
-    **Your role** at **Your Institution/Company**.  
-    Brief research / work summary in 1–3 sentences.
+    <h1>Ahmet Ata Ersoy</h1>
+    <p><strong>PhD Candidate</strong> at <strong>Southern Methodist University</strong>.<br>
+    Brief research / work summary in 1–3 sentences.</p>
 
     <div class="meta">
-      <a href="mailto:you@example.com">Email</a>
-      <a href="https://scholar.google.com/">Google Scholar</a>
-      <a href="https://github.com/YOURUSERNAME">GitHub</a>
-      <a href="https://twitter.com/YOURHANDLE">Twitter</a>
+      <a href="mailto:aersoy@smu.edu">Email</a>
+      <a href="https://scholar.google.com/citations?user=uIULEhwAAAAJ&hl=en&oi=ao">Google Scholar</a>
+      <a href="https://github.com/ataersoy">GitHub</a>
     </div>
   </div>
 </div>
