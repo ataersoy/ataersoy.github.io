@@ -1,7 +1,24 @@
-/* clean, one-column layout like the example site */
-:root { --maxw: 840px; --fg: #111; --muted:#666; --link:#0366d6; }
-*{box-sizing:border-box} html{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; color:var(--fg)}
-body{margin:0; padding:32px 16px; display:flex; justify-content:center}
+/* clean, one-column layout with theme toggle */
+:root { 
+  --maxw: 840px; 
+  --fg: #111; 
+  --bg: #ffffff;
+  --muted: #666; 
+  --link: #0366d6; 
+  --border: #eee;
+}
+
+[data-theme="dark"] {
+  --fg: #e6e6e6;
+  --bg: #1a1a1a;
+  --muted: #999;
+  --link: #58a6ff;
+  --border: #333;
+}
+
+*{box-sizing:border-box} 
+html{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; color:var(--fg); background-color:var(--bg); transition: background-color 0.3s ease, color 0.3s ease}
+body{margin:0; padding:32px 16px; display:flex; justify-content:center; background-color:var(--bg)}
 main{max-width:var(--maxw); width:100%}
 h1,h2{margin:24px 0 12px}
 p,li{line-height:1.6}
@@ -14,4 +31,39 @@ a{color:var(--link); text-decoration:none} a:hover{text-decoration:underline}
 .pub{display:grid; grid-template-columns:120px 1fr; gap:14px; margin:18px 0; align-items:start}
 .pub img{width:120px; height:80px; object-fit:cover; border-radius:6px}
 .small{color:var(--muted); font-size:0.95rem}
-footer{margin-top:32px; padding-top:16px; border-top:1px solid #eee; color:var(--muted); font-size:0.9rem}
+footer{margin-top:32px; padding-top:16px; border-top:1px solid var(--border); color:var(--muted); font-size:0.9rem}
+
+/* Theme toggle button */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--fg);
+  color: var(--bg);
+  border: 2px solid var(--fg);
+  border-radius: 50px;
+  width: 50px;
+  height: 26px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.05);
+}
+
+.theme-toggle::before {
+  content: '☀️';
+  position: absolute;
+  left: 4px;
+  transition: transform 0.3s ease;
+}
+
+[data-theme="dark"] .theme-toggle::before {
+  content: '🌙';
+  transform: translateX(20px);
+}
